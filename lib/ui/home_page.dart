@@ -21,6 +21,8 @@ class _HomePageState extends State<HomePage> {
 
     //convert String to map
     final data = json.decode(jsonData);
+
+    print(data);
   }
 
   @override
