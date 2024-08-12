@@ -41,11 +41,43 @@ class _HomePageState extends State<HomePage> {
                   if (!(snapshot.hasData)) {
                     return const CircularProgressIndicator();
                   } else {
+                    //data
                     return Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Text("Name: ${snapshot.data['name']}"),
-                        Text("Age: ${snapshot.data['age']}"),
-                        Text("Skills: ${snapshot.data['skills'].join(' - ')}"),
+                        Text(
+                          "Name: ${snapshot.data['name']}",
+                          style: const TextStyle(
+                            color: Colors.black,
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                        const SizedBox(
+                          height: 10.0,
+                        ),
+                        Text(
+                          "Age: ${snapshot.data['age']}",
+                          style: const TextStyle(
+                            color: Colors.black,
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                        const SizedBox(
+                          height: 10.0,
+                        ),
+                        Text(
+                          "Skills: ${snapshot.data['skills'].join(' - ')}",
+                          style: const TextStyle(
+                            color: Colors.black,
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
                       ],
                     );
                   }
