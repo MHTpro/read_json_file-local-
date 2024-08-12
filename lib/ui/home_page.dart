@@ -15,9 +15,12 @@ class _HomePageState extends State<HomePage> {
   //read json file method
 
   Future<void> readJsonFile() async {
-    //data (read jsons data in String)
+    //read jsons data in String
     final jsonData =
         await rootBundle.rootBundle.loadString('assets/json/data.json');
+
+    //convert String to map
+    final data = json.decode(jsonData);
   }
 
   @override
