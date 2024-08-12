@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Read Json file',
-      home: const HomePage(),
+      home: HomePage(),
     );
   }
 }
